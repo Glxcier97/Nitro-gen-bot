@@ -103,7 +103,7 @@ function SendCodes(amount, message) {
       const response = requests(url);
       const response2 = requests(url2);
       
-      if (response.status_code != 200 || response2.status_code != 200) {
+      if (response.status_code != 200 && response2.status_code != 200) {
 
         client.channels.cache.get(id).send("Invailed...");
         
